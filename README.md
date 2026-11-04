@@ -1,8 +1,8 @@
-\#.2510 Final Project
+# 2510 Final Project
 
 
 
-\##.Create user accounts for all CS faculty members automatically using bash scripts.
+## Create user accounts for all CS faculty members automatically using bash scripts.
 
 
 

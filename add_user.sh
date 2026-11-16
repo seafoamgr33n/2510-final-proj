@@ -7,7 +7,7 @@ LAST=$2
 USER="$FIRST.$LAST"
 PASS="${FIRST}${LAST}HALBERD"
 
-echo -e "Adding $FIRST $LAST with credentials:\n  Username = $USER\n  Password = $PASS\nAs a registered user."
+echo -e "Adding $FIRST $LAST with credentials:  Username = $USER as a registered user."
 
 # CONFIRM
 while true; do
@@ -15,6 +15,19 @@ while true; do
     echo ""                         # Space
     if [[ $yn =~ ^[Yy]$ ]]; then    # Confirmation evail
         echo "OK"
+        #create a USER
+        USER="$FIRST.$LAST"
+
+        #create a PASS
+        PASS="${FIRST}${LAST}HALBERD"
+
+        #create a user account
+        #ideally add -m for a home directory for the user and defaults
+        #but im not doing that
+        useradd $USER
+
+        #set the password bc useradd needs an encrypted (not plaintext) pass
+        echo "$USER:$PASS" | chpasswd
         break
     elif [[ $yn =~ [Nn]$ ]]; then
         echo "Cancelled"

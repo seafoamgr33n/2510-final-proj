@@ -45,7 +45,7 @@ sudo bash ./licensing.sh
 # -------------------- MAIN MENU --------------------
 # Menu Array
 MAIN_MENU=("1. Migrate Users"	# Scrape and instantiate all users from web page
-           "2. Add User"	# Manually name and add a user 
+           "2. Add User"	# Manually name and add a user
            "3. Exit")		# Leave
 
 # Input Loop
@@ -62,7 +62,10 @@ while (true); do
 		rm ./parsed_faculty_staff.txt
 	elif [[ $selection =~ ^[2]*$ ]]; then
 		clear
+		read -p "Enter the first name: " name1
+        read -p "Enter the last name: " name2
 		echo "Adding User"
+		sudo bash ./add_user.sh $name1 $name2
 	elif [[ $selection =~ ^[3]*$ ]]; then
 		echo "Exiting"
 	exit 1
@@ -70,7 +73,5 @@ while (true); do
 		echo "Please choose a list item [1 - ${#MAIN_MENU[@]}]"
 	fi
 done
-
-echo $selection
 
 exit 0

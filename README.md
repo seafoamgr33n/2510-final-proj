@@ -11,7 +11,7 @@ This tool creates Ubuntu accounts for TNTech Computer Science faculty. It reads 
 + Internet access and sudo rights
 + The 16-digit license key from the Scrum master's email
 
-Get the Code
+## Get the Code
 
 Install git if it is not already installed:
 
@@ -28,7 +28,9 @@ Check your versions with these commands:
 `curl --version`
 
 The first line of each result shows the version number.
+
 ## Setup
+
 Open a terminal in the project folder and run:
 
 `chmod +x *.sh`
@@ -38,6 +40,7 @@ Run the Program
 `sudo ./main.sh`
 
 On the first run, the program asks for the license key. Type the 16 digits and press Enter. You only enter the key once.
+
 ## Menu
 
 Choose an option from the menu.
@@ -50,7 +53,7 @@ Accounts use the same format every time. For example, Jane Doe gets:
 
 + Username: jane.doe
 + Password: janedoeHALBERD
-## Check That It Worked
+## Success Check
 + Go to switch user in ubuntu or log out
 If the account exists, the system shows its user ID.
 ## Common Problems

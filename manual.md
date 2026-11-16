@@ -38,7 +38,7 @@ Run the Program
 `sudo ./main.sh`
 
 On the first run, the program asks for the license key. Type the 16 digits and press Enter. You only enter the key once.
-Menu
+## Menu
 
 Choose an option from the menu.
 1. Migrate users: download the faculty page, read the names, and create an account for each person.
@@ -50,10 +50,10 @@ Accounts use the same format every time. For example, Jane Doe gets:
 
 + Username: jane.doe
 + Password: janedoeHALBERD
-### Check That It Worked
+## Check That It Worked
 + Go to switch user in ubuntu or log out
 If the account exists, the system shows its user ID.
-Common Problems
+## Common Problems
 + Permission denied: run chmod +x *.sh.
 + Run as root: start the program with sudo.
 + Invalid license key: enter the key from the email again.

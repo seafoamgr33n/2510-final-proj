@@ -54,7 +54,8 @@ Accounts use the same format every time. For example, Jane Doe gets:
 + Username: jane.doe
 + Password: janedoeHALBERD
 ## Success Check
-+ Go to switch user in ubuntu or log out
+Go to switch user in Ubuntu or log out.
+
 If the account exists, the system shows its user ID.
 ## Common Problems
 + Permission denied: run chmod +x *.sh.

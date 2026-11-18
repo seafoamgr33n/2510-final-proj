@@ -45,8 +45,8 @@ sudo bash ./licensing.sh
 # -------------------- MAIN MENU --------------------
 # Menu Array
 MAIN_MENU=("1. Migrate Users"	# Scrape and instantiate all users from web page
-           "2. Add User"	# Manually name and add a user
-           "3. Exit")		# Leave
+           "2. Add User"		# Manually name and add a user
+           "3. Exit")			# Leave
 
 # Input Loop
 while (true); do

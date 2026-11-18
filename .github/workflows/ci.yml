@@ -18,4 +18,4 @@ jobs:
    - uses: actions/checkout@v4                                         # Move code
    - run: printf 'awesome sauce\n' > fixedtest.txt                     # We are not going to depend on curl in testing -> Placeholder name for testing
    - run: bash mkuser.sh fixedtest.txt && id awesome.sauce             # Test line for mkuser.sh, run script + ensure desired user exists
-   - run: printf 'Y\n' | bash add_user.sh Craig Flatt; id craig.flatt  # Test line for add_user.sh, run + check for expected user
+   - run: printf 'Y\n' | bash add_user.sh craig flatt; id craig.flatt  # Test line for add_user.sh, run + check for expected user

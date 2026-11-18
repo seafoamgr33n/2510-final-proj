@@ -1,7 +1,7 @@
 name: CI Pipeline
 on:                        # When all of this will trigger
  push:
- branches: [main]          # Only on push to main
+  branches: [main]          # Only on push to main
 
 jobs:
  linting:                                                   # Check for issues without running

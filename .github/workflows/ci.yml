@@ -1,7 +1,5 @@
 name: CI Pipeline
-on:                        # When all of this will trigger
- push:
-  branches: [main]          # Only on push to main
+on: [push, pull_request]                                    # When all of this will trigger
 
 jobs:
 # linting:                                                   # Check for issues without running

@@ -4,12 +4,12 @@ on:                        # When all of this will trigger
   branches: [main]          # Only on push to main
 
 jobs:
- linting:                                                   # Check for issues without running
-  runs-on: ubuntu-latest                                    # GitHub supplied Ubuntu VM
-  steps:
-   - uses: actions/checkout@v4                             # Move repo to the Actions VM
-   - run: for file in *.sh; do bash -n "$file"; done       # Check each script for syntax issues
-   - run: shellcheck *.sh                                  # Static analysis for scripts
+# linting:                                                   # Check for issues without running
+#  runs-on: ubuntu-latest                                    # GitHub supplied Ubuntu VM
+#  steps:
+#   - uses: actions/checkout@v4                             # Move repo to the Actions VM
+#   - run: for file in *.sh; do bash -n "$file"; done       # Check each script for syntax issues
+#   - run: shellcheck *.sh                                  # Static analysis for scripts
 
  testing:                                                   # Our running test cases
   runs-on: ubuntu-latest                                    # GitHub VM

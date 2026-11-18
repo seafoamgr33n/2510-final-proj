@@ -1,0 +1,21 @@
+name: CI Pipeline
+on:                        # When all of this will trigger
+ push:
+ branches: [main]          # Only on push to main
+
+jobs:
+ linting:                                                   # Check for issues without running
+  runs-on: ubuntu:latest                                    # GitHub supplied Ubuntu VM
+  steps:
+   - uses: actions/checkout@v1                             # Move repo to the Actions VM
+   - run: for file in *.sh; do bash -n "$file"; done       # Check each script for syntax issues
+   - run: shellcheck *.sh                                  # Static analysis for scripts
+
+ testing:                                                   # Our running test cases
+  runs-on: ubuntu-latest                                    # GitHub VM
+  container: ubuntu:26.04                                   # With target environment image
+  steps:
+   - uses: actions/checkout@v1                                         # Move code
+   - run: printf 'Awesome Sauce\n' > fixedtest.txt                     # We are not going to depend on curl in testing -> Placeholder name for testing
+   - run: bash mkuser.sh fixedtest.txt && id awesome.sauce             # Test line for mkuser.sh, run script + ensure desired user exists
+   - run: printf 'Y/n' | bash add_user.sh Craig Flatt; id craig.flatt  # Test line for add_user.sh, run + check for expected user

@@ -68,10 +68,8 @@ while (true); do
 		sudo bash ./add_user.sh $name1 $name2
 	elif [[ $selection =~ ^[3]*$ ]]; then
 		echo "Exiting"
-	exit 1
+	exit 0
 		else
 		echo "Please choose a list item [1 - ${#MAIN_MENU[@]}]"
 	fi
 done
-
-exit 0

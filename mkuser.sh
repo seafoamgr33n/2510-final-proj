@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 #for all of the lines in the file that is input/piped in

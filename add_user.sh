@@ -36,5 +36,3 @@ while true; do
         echo "Invalid.\n"
     fi
 done
-
-exit 55                             # Felt smart (11:53PM) might evaluate later

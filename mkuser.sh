@@ -5,10 +5,10 @@
 while read -r LINE
 do
 	#extract first name from a lineinto a var
-	FIRST=$( echo $LINE | awk '{ print $1 }' )
+	FIRST=$( echo "$LINE" | awk '{ print $1 }' )
 
 	#extract lastname from a line into a var
-	LAST=$( echo $LINE | awk '{ print $2 }' )
+	LAST=$( echo "$LINE" | awk '{ print $2 }' )
 
 	#create a USER
 	USER="$FIRST.$LAST"
@@ -19,7 +19,7 @@ do
 	#create a user account
 	#ideally add -m for a home directory for the user and defaults 
 	#but im not doing that
-	useradd $USER 
+	useradd "$USER" 
 
 	#set the password bc useradd needs an encrypted (not plaintext) pass
 	echo "$USER:$PASS" | chpasswd
